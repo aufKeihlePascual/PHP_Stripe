@@ -1,0 +1,417 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #444;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.message.success {
+    background: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.message.error {
+    background: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Product and Cart Styles */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.cart-product {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-item-image {
+    max-width: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+    /* margin-left: 160px; */
+    margin-top: -5px;
+}
+
+.price-quantity {
+    /* font-size: 1.2rem; */
+    display: flex;  /* Make the container a flex container */
+    align-items: center;
+}
+
+.price-quantity-group {
+    display: flex;  
+    align-items: center;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.x {
+    color: #666;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-item-details h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cart-item-price p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.quantity-controls {
+    display: flex;  /* Align buttons horizontally */
+    align-items: center;
+}
+
+.quantity-controls p {
+    margin-left: 250px;
+}
+
+.quantity-controls .quantity-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 7px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-controls .quantity-btn1 {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 7px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background: #218838;
+}
+
+.quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.cart-item input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.cart-item button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background: #218838;
+}
+
+/* Total Price and Checkout */
+.total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: end;
+}
+
+.center-button {
+    text-align: center;
+    width: 100%;
+}
+
+.checkout-button {
+    background: #26a73c;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.checkout-button:hover {
+    background: #0d6d1d;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal a,
+.modal button {
+    display: inline-block;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    transition: background 0.3s;
+    box-sizing: border-box;
+}
+
+.modal a {
+    background: #28a745;
+    color: #fff;
+}
+
+.modal a:hover {
+    background: #218838;
+}
+
+.modal button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background: #c82333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #287e8d; /* Green background */
+    padding: 15px 20px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays above other content */
+}
+
+.navbar-menu {
+    list-style-type: none; /* Removes the default list bullets */
+    display: flex;
+    justify-content: center; /* Centers the items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 20px; /* Space between items */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white; /* Text color */
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+    background-color: #145e33; /* Darker green on hover */
+}
+
+body {
+    padding-top: 60px; /* Adds space below the fixed navbar */
+}
+
+.clear-cart-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clear-cart-btn {
+    background-color: #dc3545; /* Red color for the clear cart button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.clear-cart-btn:hover {
+    background-color: #c82333; /* Darker red when hovered */
+}
+
+/* Go back to shopping button */
+.go-back-form {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.go-back-btn {
+    background-color: #007bff; /* Blue color for the "Go Back to Shopping" button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.go-back-btn:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form fieldset {
+        padding: 10px;
+    }
+
+    /* Navbar responsive */
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    /* Cart item image */
+    img .cart-item-image {
+        width: 120px;          
+        height: 120px;         
+        border-radius: 8px;    
+        object-fit: cover;
+    }
+    
+    /* Cart buttons */
+    .cart-item button {
+        padding: 8px 15px;
+    }
+}
