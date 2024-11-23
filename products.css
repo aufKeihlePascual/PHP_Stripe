@@ -1,4 +1,3 @@
-/* Body and Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,9 +8,9 @@ body {
 
 .container {
     width: 90%;
-    margin: 0 auto; /* Centers the container horizontally */
+    margin: 0 auto; 
     padding: 30px 0;
-    max-width: 1200px; /* Optional: Limit the max width to prevent it from stretching too much on larger screens */
+    max-width: 1200px; 
 }
 
 .page-title {
@@ -22,31 +21,30 @@ body {
     margin-bottom: 40px;
 }
 
-/* Navbar Styles */
 .navbar {
-    background-color: #287e8d; /* Green background */
+    background-color: #287e8d;
     padding: 15px 20px;
-    position: fixed; /* Fix the navbar at the top */
+    position: fixed; 
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures the navbar stays above other content */
+    z-index: 1000; 
 }
 
 .navbar-menu {
-    list-style-type: none; /* Removes the default list bullets */
+    list-style-type: none; 
     display: flex;
-    justify-content: center; /* Centers the items */
+    justify-content: center; 
     margin: 0;
     padding: 0;
 }
 
 .navbar-item {
-    margin: 0 20px; /* Space between items */
+    margin: 0 20px; 
 }
 
 .navbar-link {
     text-decoration: none;
-    color: white; /* Text color */
+    color: white; 
     font-size: 1.2rem;
     font-weight: 600;
     padding: 8px 16px;
@@ -55,19 +53,18 @@ body {
 }
 
 .navbar-link:hover {
-    background-color: #145e33; /* Darker green on hover */
+    background-color: #145e33; 
 }
 
 body {
-    padding-top: 60px; /* Adds space below the fixed navbar */
+    padding-top: 60px; 
 }
 
-/* Product List Styles */
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 20px;
-    justify-items: center; /* Centers the items within the grid */
+    justify-items: center; 
 }
 
 .product-item {
@@ -140,7 +137,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Buy Now Button Styles */
 .buy-button {
     display: inline-block;
     padding: 12px 25px;
@@ -148,7 +144,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    border: none; /* Removed border */
+    border: none; 
     border-radius: 4px;
     transition: background-color 0.3s ease;
     text-align: center;
@@ -162,29 +158,27 @@ body {
     background-color: #145e33;
 }
 
-/* Checkout Button Styles */
 .checkout-button {
     display: block;
     padding: 12px 30px;
-    background-color: #0e74af; /* Different color for the checkout button */
+    background-color: #0e74af; 
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border: none; /* No border */
+    border: none; 
     border-radius: 4px;
     transition: background-color 0.3s ease;
     text-align: center;
-    width: 250px; /* Increased width */
-    margin: 50px auto; /* Center the button */
+    width: 250px; 
+    margin: 50px auto; 
     text-transform: uppercase;
     cursor: pointer;
 }
 
 .checkout-button:hover {
-    background-color: #07306e; /* Darker green on hover */
+    background-color: #07306e; 
 }
 
-/* Registration Form Styles */
 .registration-form-container {
     background-color: #fff;
     padding: 30px;
@@ -240,7 +234,6 @@ body {
     background-color: #27583c;
 }
 
-/* Message Style */
 .message {
     text-align: center;
     padding: 10px;

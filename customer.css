@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
@@ -6,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    padding-top: 60px; /* Adds space for the fixed navbar */
+    padding-top: 60px; 
 }
 
 h1 {
@@ -16,31 +15,30 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Navbar Styles */
 .navbar {
     background-color: #287e8d;
     padding: 15px 20px;
-    position: fixed; /* Fix the navbar at the top */
+    position: fixed; 
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures the navbar stays above other content */
+    z-index: 1000; 
 }
 
 .navbar-menu {
-    list-style-type: none; /* Removes the default list bullets */
+    list-style-type: none; 
     display: flex;
-    justify-content: center; /* Centers the items */
+    justify-content: center; 
     margin: 0;
     padding: 0;
 }
 
 .navbar-item {
-    margin: 0 20px; /* Space between items */
+    margin: 0 20px; 
 }
 
 .navbar-link {
     text-decoration: none;
-    color: white; /* Text color */
+    color: white;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 8px 16px;
@@ -49,10 +47,9 @@ h1 {
 }
 
 .navbar-link:hover {
-    background-color: #145e33; /* Darker green on hover */
+    background-color: #145e33; 
 }
 
-/* Form Container */
 .form-container {
     max-width: 600px;
     margin: 50px auto;
@@ -113,7 +110,6 @@ input:focus {
     border-color: #007bff;
 }
 
-/* Button Styles */
 button {
     background: #007bff;
     color: #fff;
@@ -130,13 +126,12 @@ button:hover {
     background: #0056b3;
 }
 
-/* Product List (List Products Page) */
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
     gap: 20px;
-    justify-items: center; /* Centers items in each grid cell */
-    width: 100%; /* Ensures the grid takes up the full width */
+    justify-items: center; 
+    width: 100%; 
 }
 
 .product-item {
@@ -228,7 +223,6 @@ button:hover {
     background-color: #145e33;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .form-container {
         padding: 20px;
@@ -242,8 +236,7 @@ button:hover {
         font-size: 0.9rem;
     }
 
-    /* Adjust grid layout for smaller screens */
     .product-list {
-        grid-template-columns: 1fr 1fr; /* Adjusts the grid for smaller screens */
+        grid-template-columns: 1fr 1fr; 
     }
 }

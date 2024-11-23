@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <nav class="navbar">
         <ul class="navbar-menu">
-            <li class="navbar-item"><a href="create-customer.php" class="navbar-link">Home</a></li>
+            <li class="navbar-item"><a href="create-customer.php" class="navbar-link">Register</a></li>
             <li class="navbar-item"><a href="list-products.php" class="navbar-link">Products</a></li>
             <li class="navbar-item"><a href="generate-invoice.php" class="navbar-link">Generate Invoice</a></li>
         </ul>

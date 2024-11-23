@@ -1,29 +1,23 @@
 <?php
 require 'init.php';
 
-// Start the session to retrieve the cart
 session_start();
 
 $errorMessage = '';
 $paymentLinkUrl = '';
 
-// Retrieve the cart from session
 $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
 if (!empty($cart)) {
-    // Prepare line items based on cart data
     $line_items = [];
     foreach ($cart as $item) {
         try {
-            // Retrieve the product and price info from Stripe
             $product = $stripe->products->retrieve($item['productId']);
             $price = $stripe->prices->retrieve($product->default_price);
 
-            // Ensure price_id and quantity are properly set
-            $item['price_id'] = $price->id;  // Use price_id from Stripe
-            $item['quantity'] = isset($item['quantity']) ? $item['quantity'] : 1; // Ensure quantity is set
+            $item['price_id'] = $price->id;  
+            $item['quantity'] = isset($item['quantity']) ? $item['quantity'] : 1; 
 
-            // Add to line items
             $line_items[] = [
                 'price' => $item['price_id'],
                 'quantity' => $item['quantity'],
@@ -35,7 +29,6 @@ if (!empty($cart)) {
         }
     }
 
-    // If no error, generate the payment link
     if (empty($errorMessage)) {
         try {
             $payment_link = $stripe->paymentLinks->create([
@@ -64,7 +57,7 @@ if (!empty($cart)) {
 <body>
     <nav class="navbar">
         <ul class="navbar-menu">
-            <li class="navbar-item"><a href="create-customer.php" class="navbar-link">Home</a></li>
+            <li class="navbar-item"><a href="create-customer.php" class="navbar-link">Register</a></li>
             <li class="navbar-item"><a href="list-products.php" class="navbar-link">Products</a></li>
             <li class="navbar-item"><a href="generate-invoice.php" class="navbar-link">Generate Invoice</a></li>
         </ul>

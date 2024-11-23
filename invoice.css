@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -45,7 +44,6 @@ h1 {
     border: 1px solid #ebccd1;
 }
 
-/* Product and Cart Styles */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -85,7 +83,7 @@ h1 {
 
 .price-quantity {
     /* font-size: 1.2rem; */
-    display: flex;  /* Make the container a flex container */
+    display: flex; 
     align-items: center;
 }
 
@@ -295,31 +293,30 @@ h1 {
     background: #c82333;
 }
 
-/* Navbar Styles */
 .navbar {
-    background-color: #287e8d; /* Green background */
+    background-color: #287e8d; 
     padding: 15px 20px;
-    position: fixed; /* Fix the navbar at the top */
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures the navbar stays above other content */
+    z-index: 1000; 
 }
 
 .navbar-menu {
-    list-style-type: none; /* Removes the default list bullets */
+    list-style-type: none; 
     display: flex;
-    justify-content: center; /* Centers the items */
+    justify-content: center; 
     margin: 0;
     padding: 0;
 }
 
 .navbar-item {
-    margin: 0 20px; /* Space between items */
+    margin: 0 20px; 
 }
 
 .navbar-link {
     text-decoration: none;
-    color: white; /* Text color */
+    color: white; 
     font-size: 1.2rem;
     font-weight: 600;
     padding: 8px 16px;
@@ -328,11 +325,11 @@ h1 {
 }
 
 .navbar-link:hover {
-    background-color: #145e33; /* Darker green on hover */
+    background-color: #145e33; 
 }
 
 body {
-    padding-top: 60px; /* Adds space below the fixed navbar */
+    padding-top: 60px; 
 }
 
 .clear-cart-form {
@@ -341,7 +338,7 @@ body {
 }
 
 .clear-cart-btn {
-    background-color: #dc3545; /* Red color for the clear cart button */
+    background-color: #dc3545; 
     color: white;
     padding: 10px 20px;
     font-size: 1.1rem;
@@ -353,17 +350,16 @@ body {
 }
 
 .clear-cart-btn:hover {
-    background-color: #c82333; /* Darker red when hovered */
+    background-color: #c82333;
 }
 
-/* Go back to shopping button */
 .go-back-form {
     text-align: center;
     margin-top: 5px;
 }
 
 .go-back-btn {
-    background-color: #007bff; /* Blue color for the "Go Back to Shopping" button */
+    background-color: #007bff; 
     color: white;
     padding: 10px 20px;
     font-size: 1.1rem;
@@ -375,10 +371,9 @@ body {
 }
 
 .go-back-btn:hover {
-    background-color: #0056b3; /* Darker blue when hovered */
+    background-color: #0056b3; 
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -392,7 +387,6 @@ body {
         padding: 10px;
     }
 
-    /* Navbar responsive */
     .navbar-menu {
         flex-direction: column;
         align-items: center;
@@ -402,7 +396,6 @@ body {
         margin: 10px 0;
     }
 
-    /* Cart item image */
     img .cart-item-image {
         width: 120px;          
         height: 120px;         
@@ -410,7 +403,6 @@ body {
         object-fit: cover;
     }
     
-    /* Cart buttons */
     .cart-item button {
         padding: 8px 15px;
     }
