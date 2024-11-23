@@ -245,7 +245,7 @@ h1 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .modal p {
@@ -406,4 +406,54 @@ body {
     .cart-item button {
         padding: 8px 15px;
     }
+}
+
+.download-invoice-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.download-invoice-form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.download-invoice-form .dropdown-menu {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #444;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.download-invoice-form .dropdown-menu:hover {
+    border-color: #28a745;
+}
+
+.download-invoice-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 220px;
+}
+
+.download-invoice-form button:hover {
+    background-color: #218838;
 }

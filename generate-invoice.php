@@ -1,12 +1,20 @@
 <?php
 require 'init.php';
+require 'vendor/autoload.php';
 
 session_start();
 
 $errorMessage = '';
 $paymentLinkUrl = '';
-
 $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+
+// Fetch customers from Stripe
+$customers = [];
+try {
+    $customers = $stripe->customers->all(['limit' => 10]); // Adjust the limit as needed
+} catch (\Stripe\Exception\ApiErrorException $e) {
+    $errorMessage = "Error fetching customers: " . htmlspecialchars($e->getMessage());
+}
 
 if (!empty($cart)) {
     $line_items = [];
@@ -42,9 +50,7 @@ if (!empty($cart)) {
 } else {
     $errorMessage = "No products in cart.";
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -137,6 +143,25 @@ if (!empty($cart)) {
         <form action="list-products.php" method="GET" class="go-back-form">
             <button type="submit" class="go-back-btn">Go Back to Shopping</button>
         </form>
+
+        <form action="download-invoice.php" method="POST" class="download-invoice-form">
+            <label for="customer_id">Select Customer:</label>
+            <select name="customer_id" id="customer_id" class="dropdown-menu">
+                <?php
+                try {
+                    $customers = $stripe->customers->all();
+
+                    foreach ($customers as $customer) {
+                        echo "<option value='" . htmlspecialchars($customer->id) . "'>" . htmlspecialchars($customer->name) . "</option>";
+                    }
+                } catch (\Stripe\Exception\ApiErrorException $e) {
+                    echo "<option disabled>Error fetching customers</option>";
+                }
+                ?>
+            </select>
+            <button type="submit" class="btn">Download PDF Invoice</button>
+        </form>
+
     </div>
 
     <script src="cart.js"></script>
