@@ -7,6 +7,7 @@ require 'vendor/autoload.php';
 
 session_start();
 
+global $stripe;
 $cart = $_SESSION['cart'] ?? [];
 $customerId = $_POST['customer_id'] ?? null; // Fetch customer_id from the form
 

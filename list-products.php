@@ -2,6 +2,7 @@
 require 'init.php';
 
 session_start();
+global $stripe;
 
 try {
     $products = $stripe->products->all(['limit' => 10]);

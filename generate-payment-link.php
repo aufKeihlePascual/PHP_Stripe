@@ -2,6 +2,7 @@
 
 require "init.php";
 
+global $stripe;
 $line_items = [];
 
 $products = $stripe->products->all();

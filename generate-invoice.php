@@ -4,6 +4,7 @@ require 'vendor/autoload.php';
 
 session_start();
 
+global $stripe;
 $errorMessage = '';
 $paymentLinkUrl = '';
 $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
